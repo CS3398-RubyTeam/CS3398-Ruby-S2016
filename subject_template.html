@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Subject Page Template</title>
 <style type="text/css"> 
-<!--
+
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background: #404040;
@@ -102,8 +102,8 @@ a:hover, a:active, a:focus {
 .container .content h5 {
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; color: #333333
 }
--->
- 
+
+
 </style>
 </head>
  
@@ -172,6 +172,7 @@ a:hover, a:active, a:focus {
     <br />
 	<h4>Javascript template:</h4>
 
+
 	<table width="70%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" 	
     	bgcolor="#E2E2E2">
     	<tr>
@@ -202,43 +203,49 @@ a:hover, a:active, a:focus {
         <tr>
         	<td style="width:15%;">
             <blockquote>
-            	<input id="numb">
+            	<input id="dec_numb" placeholder="Decimal">
         	</td>
             <td style="width:15%;">
-            	<input id="numb">
+            	<input id="bin_numb" placeholder="Binary">
         	</td>
 		</tr>
         <tr>
         	<td style="width:15%;">
             <blockquote>
-            	<input id="numb">
+            	<input id="hex_numb" placeholder="Hex">
         	</td>
             <td style="width:15%;">
-            	<input id="numb">
+            	<input id="oct_numb" placeholder="Oct">
         	</td>
+          <!-- added placeholder words for each type of output -sz -->
 		</tr>		
-            
+ <!-- changed the html ID's so they are different. HTML elements should not have the same ID's because they are different things and should be named differently based on single responsibility principal. sz-->    
 	</table>
 
 	<script>
 		function chooseDec() 
 		{
-   			document.getElementById("stuff").innerHTML = "<-- Number inputted is Decimal";
+   			document.getElementById("stuff").innerHTML = "Number inputted is Decimal";
+   var numb = document.getElementById("numb").value;
+   var final = Number(numb).toString(2);
+   document.getElementById("bin_numb").value = final;
+   document.getElementById("dec_numb").value = numb;
+   /* the decimal will be converted to binary and loaded into one of the inputs -sz */
 		}
 
 		function chooseBin() 
 		{
-  	 	document.getElementById("stuff").innerHTML = "<-- Number inputted is Binary";
+  	 	document.getElementById("stuff").innerHTML = " Number inputted is Binary";
 		}
 
 		function chooseHex() 
 		{
-   		document.getElementById("stuff").innerHTML = "<-- Number inputted is Hexadecimal";
+   		document.getElementById("stuff").innerHTML = "Number inputted is Hexadecimal";
 		}
 
 		function chooseOctal() 
 		{
-   		document.getElementById("stuff").innerHTML = "<-- Number inputted is Octal";
+   		document.getElementById("stuff").innerHTML = "Number inputted is Octal";
 		}
 	</script>
 <br />
