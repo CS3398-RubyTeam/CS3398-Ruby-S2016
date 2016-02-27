@@ -1,0 +1,77 @@
+Listed below are the JavaScript code for the math formulas:
+
+1. Quadratic Formula:
+   
+   var ans1 = ( (b * -1) + Math.sqrt(Math.pow(b,2) - 4 * a * c) / (2 * a) );
+   var ans2 = ( (b * -1) - Math.sqrt(Math.pow(b,2) - 4 * a * c) / (2 * a) );
+
+
+2. Area of a right triangle:
+
+   var rt_tri_area = (1/2) * base * height;
+
+
+3. Area of a triangle:
+   
+   var perimeter = (side1 + side2 + side3)/2;
+   var tri_area = Math.sqrt(perimeter * ( (perimeter - side1) * (perimeter - side2) * (perimeter - side3)) );
+
+
+4. Area of a circle:
+
+   var circle_area = Math.PI * Math.pow(radius,2);
+
+
+
+5. Circumference of a circle:
+
+   var c1 = 2 * Math.PI * radius;
+   var c2 = Math.PI * diameter;
+
+
+6. Area of a trapeziod:
+
+   var area_trap = ((base1 + base2)/2) * height;
+
+
+7. Area of a rhombus:
+
+   var area_rhombus = (1/2) * diagonal1 * diagonal2; 
+
+
+8. Area of a square:
+
+   var area_sq1 = Math.pow(side,2);
+   var area_sq2 = (1/2) * d1 * d2;
+
+
+9. Slope of a line:
+
+   var slope = (y2 - y2)/(x2 - x1);
+
+
+10. Midpoint for a line:
+
+    var x_mid = ((x1 + x2)/2);
+    var y_mid = ((y1 + y2)/2);
+
+11. Distance formula:
+
+    var distance = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1), 2));
+
+
+Added some new formulas:
+
+12. Area of a rhombus:
+
+    var area_rhombus = (1/2) * height * (base1 + base2);
+
+
+13. Area of an oval:
+
+    var area_oval = diagonal1 * diagonal2 * (1/2);
+
+
+14. Volume of Rectangle Prism:
+
+    var vol_rect_prism = length * width * height;
