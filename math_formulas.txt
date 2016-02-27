@@ -47,7 +47,7 @@ Listed below are the JavaScript code for the math formulas:
 
 9. Slope of a line:
 
-   var slope = (y2 - y2)/(x2 - x1);
+   var slope = (y2 - y1)/(x2 - x1);
 
 
 10. Midpoint for a line:
@@ -62,9 +62,9 @@ Listed below are the JavaScript code for the math formulas:
 
 Added some new formulas:
 
-12. Area of a rhombus:
+12. Area of a rhombus-2:
 
-    var area_rhombus = (1/2) * height * (base1 + base2);
+    var area_rhombus2 = (1/2) * height * (base1 + base2);
 
 
 13. Area of an oval:
