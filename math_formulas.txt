@@ -75,3 +75,48 @@ Added some new formulas:
 14. Volume of Rectangle Prism:
 
     var vol_rect_prism = length * width * height;
+    
+    
+15. Volume of a Cube:
+
+    var cube_vol = Math.pow(side, 3);
+
+
+16. Volume of a Pyramid:
+
+    var pyramid_vol = (1/3) * base * height;
+
+
+17.  Volume of a Cone:
+
+     var cone_vol = (1/3) * Math.PI * Math.pow(radius,2) * height;
+
+
+18. Volume of a Sphere:
+
+    var sphere_vol = (4/3) * Math.PI * Math.pow(radius,3);
+
+
+19. Volume of an Ellipsoid:
+
+    var ellipsoid_vol = (4/3) * Math.PI * radius1 * radius2 * radius3;
+
+
+20. Surface Area of a Cube:
+
+    var surf_cube = 6 * Math.pow(side, 2);
+
+
+21. Surface Area of Rectangular Prism:
+
+    var surf_rect = (2 * side1 * side2) + (2 * side2 * side3) + (2 * side1 * side3);
+
+
+22. Surface Area of a Sphere:
+
+    var surf_sphere = 4 * Math.PI * Math.pow(radius,2);
+
+
+23. Surface Area of a Cylinder:
+
+    var surf_cyl = (2 * Math.PI * Math.pow(radius,2)) + (2 * Math.PI * radius * height);
