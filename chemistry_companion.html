@@ -1,214 +1,191 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Science Companion for Chemistry</title>
-<style type="text/css"> 
-<!--
-body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background: #404040;
-	margin: 0;
-	padding: 0;
-	color: #000000;
-}
- 
-/* ~~ Element/tag selectors ~~ */
-ul, ol, dl { 
-	padding: 0;
-	margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;	
-	padding-right: 13%;
-	padding-left: 3%; 
-}
-a img { 
-	border: none;
-}
- 
- 
-a:link {
-	color:#3333FF;
-	text-decoration: none; 
-}
- 
-a:visited {
-	color: #4E5869;
-	text-decoration: none;
-}
- 
-a:hover, a:active, a:focus { 
-	text-decoration: none;
-}
- 
-.container {
-	width: 88%;
-	max-width: 2000px;
-	min-width: 780px;
-	background: #D2D2D2;
-	margin: 0 auto;
-	float: right; 
-}
- 
- 
-.content {
-	padding: 10px 0;
-}
- 
-.content ul, .content ol { 
-	padding: 0 15px 15px 40px;
-}
-
-.footer {
-	color:#FFFFFF;
-	padding: 0px;
-	background: #404040;
-}
- 
-.fltrt { 
-	float: right;
-	margin-left: 8px;
-}
- 
-.fltlft { 
-	float: left;
-	margin-right: 8px;
-}
- 
-.clearfloat { 
-	clear:both;
-	height:0;
-	font-size: 1px;
-	line-height: 0px;
-}
- 
-.container .content h1 {
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; color: #AC9728
-}
- 
-.container .content h2 {
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; color: #333333
-}
-
-.container .content h3 {
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; color: #333333
-}
-
-.container .content h4 {
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; color: #333333
-}
-
-.container .content h5 {
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; color: #333333
-}
--->
- 
-</style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,800italic,800,700italic,700,600italic,600,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
 </head>
- 
+
 <body>
-<!--
-	Uploaded the initial subject page template to be edited by other members for homework 4.    -Marco Garza 02/19/16
--->
-		
-	<table width="12%" height="50" border="0" align="left" cellpadding="0" cellspacing="10">
-		<tr>
-    
-        </tr>
-		<tr>        
-        	<td style="text-align:center; width:85px; background-color: #DADADA;">
-            	<a href="science_companion.html"><span style="color: black; font-family: Verdana;">Main Toolbox</span></a>
-			</td>
-		</tr>
-		<tr>
-        	<td style="text-align: center; width:85px; background-color: #404040;">
-				<span style="color: black; font-family: Verdana;">&nbsp;</span></td>
-		</tr>
-        <tr>
-        	<td style="text-align: center; width:85px; background-color: #DADADA;">
-				<a href="math_companion.html"><span style="color: black; font-family: Verdana;">Math Toolbox</span></a></td>
-		</tr>
-        <tr>
-        	<td style="text-align: center; width:85px; background-color: #AC9728;">
-				<span style="color: white; font-family: Verdana;">Chem Toolbox</span></td>
-		</tr>
-        <tr>
-        	<td style="text-align: center; width:85px; background-color: #DADADA;">
-				<a href="cs_companion.html"><span style="color: black; font-family: Verdana;">CS Toolbox</span></a></td>
-		</tr>
-		<tr>
-        	<td style="text-align: center; width:85px; background-color: #DADADA;">
-            
-            <a href="ee_companion.html"><span style="font-family: Verdana; color: black">EE Toolbox</span></a></td>
-      	</tr>
-	</table>
-   
-<div class="container">
-	</br>
-
-<div class="content">
+  <div id="main">
+    <header>
+      <h1>Chemistry Toolbox</h1>
+    </header>
+    <section>
+        <div id="overlay"></div>
+  <div id="shadowbox"> 
+    <div id="sbname"></div>
+    <div id="sbam"></div>
+  </div>
   
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
-		<tr>      
-			<td style="width:65%;">
-                <h1>Chemistry Toolbox</h1>
-			</td>
-            <td style="width:20%;">
-<!--
-                <img src="toolbox_4.png" width="100" height="80" alt="" align="right"/>
--->
-            </td>
-            <td style="width:15%;">
-            </td>
-		</tr>
-	</table>    
-    <br />
-    <h2>References and Applications</h2>
-    <table style="background-color: #D2D2D2; width:100%; height: 35px; text-align: center; border	
-    	: 0 cellpadding: 2; cellspacing: 3; align: left;">
-    	<tr>
-        	<td style="background-color: #EAEAEA; color: black;">Page Menu Item 1</td>
-        	<td style="background-color: #EAEAEA; color: black;">Page Menu Item 2</td>
-        	<td style="background-color: #EAEAEA; color: black;">Page Menu Item 3</td>
-	  </tr>
-        <tr>    
-        	<td style="background-color: #EAEAEA; color: black;">Application Item 1</td>
-        	<td style="background-color: #EAEAEA; color: black;">Application Item 2</td>
-            <td style="background-color: #EAEAEA; color: black;">Application Item 3</td> 
-    	</tr>
-	</table>
-	<img src="divider404040.gif" width="100%" height="6" alt="" align="center" class="footer" />
-   
-<div style="background-color:#AAAAAA; position:absolute; width:100%;">
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+  <div>
+    <div class="box" name="Hydrogen" am="1">H</div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div class="box">He</div>
 
-  <div class="footer">
-    <img src="blk_dot.gif" width="100%" height="10" alt="" align="center" class="footer" />  
-    <p align=left>
-    Last updated 02/27/2016
-    </p>
-    <br /><br />
-    <!-- end .footer --></div>  
-</div>
-</div>
-</div>
+
+  </div>
+
+  <div>
+    <div class="box">Li</div>
+    <div class="box">Be</div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">N</div>
+    <div class="box">O</div>
+    <div class="box">F</div>
+    <div class="box">Ne</div>
+  </div>
+
+  <div>
+    <div class="box">Na</div>
+    <div class="box">Mg</div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div id="ebox"></div>
+    <div class="box">Al</div>
+    <div class="box">Si</div>
+    <div class="box">P</div>
+    <div class="box">S</div>
+    <div class="box">Cl</div>
+    <div class="box">Ar</div>
+  </div>
+
+  <div>
+    <div class="box">K</div>
+    <div class="box">Ca</div>
+    <div class="box">Sc</div>
+    <div class="box">Ti</div>
+    <div class="box">V</div>
+    <div class="box">Cr</div>
+    <div class="box">Mn</div>
+    <div class="box">Fe</div>
+    <div class="box">Co</div>
+    <div class="box">Ni</div>
+    <div class="box">Cu</div>
+    <div class="box">Zn</div>
+    <div class="box">Ga</div>
+    <div class="box">Ge</div>
+    <div class="box">As</div>
+    <div class="box">Se</div>
+    <div class="box">Br</div>
+    <div class="box">Kr</div>
+  </div>
+
+  <div>
+    <div class="box">Rb</div>
+    <div class="box">Sr</div>
+    <div class="box">Y</div>
+    <div class="box">Zr</div>
+    <div class="box">Nb</div>
+    <div class="box">Mo</div>
+    <div class="box">Tc</div>
+    <div class="box">Ru</div>
+    <div class="box">Rh</div>
+    <div class="box">Pd</div>
+    <div class="box">Ag</div>
+    <div class="box">Cd</div>
+    <div class="box">In</div>
+    <div class="box">Sn</div>
+    <div class="box">Sb</div>
+    <div class="box">Te</div>
+    <div class="box">I</div>
+    <div class="box">Xe</div>
+  </div>
+  <div>
+    <div class="box">Cs</div>
+    <div class="box">Ba</div>
+    <div class="box">Lu</div>
+    <div class="box">Hf</div>
+    <div class="box">Ta</div>
+    <div class="box">W</div>
+    <div class="box">Re</div>
+    <div class="box">Os</div>
+    <div class="box">Ir</div>
+    <div class="box">Pt</div>
+    <div class="box">Au</div>
+    <div class="box">Hg</div>
+    <div class="box">Tl</div>
+    <div class="box">Pb</div>
+    <div class="box">Bi</div>
+    <div class="box">Po</div>
+    <div class="box">At</div>
+    <div class="box">Rn</div>
+  </div>
+  <div>
+    <div class="box">Fr</div>
+    <div class="box">Ra</div>
+    <div class="box">Lr</div>
+    <div class="box">Rf</div>
+    <div class="box">Db</div>
+    <div class="box">Sg</div>
+    <div class="box">Bh</div>
+    <div class="box">Hs</div>
+    <div class="box">Mt</div>
+    <div class="box">Ds</div>
+    <div class="box">Rg</div>
+    <div class="box">Cn</div>
+    <div class="box">Uut</div>
+    <div class="box">Fl</div>
+    <div class="box">Uup</div>
+    <div class="box">Lv</div>
+    <div class="box">Uus</div>
+    <div class="box">Uuo</div>
+  </div>
+ 
 </body>
+    </section>
+  </div>
+  <nav>
+    <div id="sitetitle">Science Companion</div>
+      <ul>
+        <li><a href="google.com" id="chem"class="active"><i class="fa fa-flask fa-fw"></i>Chem Toolbox</a></li>
+        <li><a href="google.com" id="math"><i class="fa fa-calculator fa-fw"></i>Math Toolbox</a></li>
+        <li><a href="google.com" id="cs"><i class="fa fa-laptop fa-fw"></i>CS Toolbox</a></li>
+        <li><a href="google.com" id="ee"><i class="fa fa-bolt fa-fw"></i>EE Toolbox</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <div>
+
+  </div>
+
+</body>
+
 </html>
