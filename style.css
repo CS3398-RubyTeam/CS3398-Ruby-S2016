@@ -55,13 +55,13 @@ nav ul li a:hover{
 #chem:hover, #chem.active{
   background:green;
 }
-#math:hover{
+#math:hover, #math.active{
   background:blue;
 }
-#cs:hover{
+#cs:hover, #cs.active{
   background:red;
 }
-#ee:hover{
+#ee:hover, #ee.active{
   background:purple;
 }
 .box {
