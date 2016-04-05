@@ -1,0 +1,74 @@
+/* --------------mapTableStyle---------------- */
+
+table.maptable {
+	font-family: courier;
+    border-collapse: collapse;
+    border: 2px solid black;
+	width:150px;
+	align:left;
+}
+th.maptable {
+	font-family: consolas;
+	border: 2px solid black;
+	padding: 7px;
+    text-align: center;
+}
+td.maptable {
+	font-family: consolas;
+	border: 2px solid black;
+	padding: 7px;
+    text-align: center;
+}
+
+.maptable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* --------------endofMapTableStyle---------------- */
+
+ /* --------------tabStyle---------------- */
+ 
+ /* Style the list */
+ ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #EAEAEA 	;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+/*	border: 1px solid #ccc; */
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
