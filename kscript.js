@@ -31,23 +31,35 @@ function copyVar(destinationId, sourceId) {
 		document.getElementById(destinationId).innerHTML = x;
 	
 }
+//Changes the color of the row that is being clicked with the mouse
+function changeRowColor(id, num){
+		if( truthValue[num] == "D")
+	{
+		document.getElementById(id).style.backgroundColor = "#AE9EFF";
+	}
+	else if( truthValue[num] == 1)
+	{
+		document.getElementById(id).style.backgroundColor = "#FF9EBE";
+	}
+	else if( truthValue[num] == 0)
+	{
+		document.getElementById(id).style.backgroundColor = "#9EFFDE ";
+	}
+}
 // Changes the truth value from D to 1 to 0 back to dont care D.
 function rotateTruthV(id, num) {
 	if( truthValue[num] == "D")
 	{
-		document.getElementById(id).style.color = "red";
 		document.getElementById(id).innerHTML = 1;
 		truthValue[num] = 1;
 	}
 	else if( truthValue[num] == 1)
 	{
-		document.getElementById(id).style.color = "green";
 		document.getElementById(id).innerHTML = 0;
 		truthValue[num] = 0;
 	}
 	else if( truthValue[num] == 0)
 	{
-		document.getElementById(id).style.color = "blue";
 		document.getElementById(id).innerHTML = "D";
 		truthValue[num] = "D";
 	}
