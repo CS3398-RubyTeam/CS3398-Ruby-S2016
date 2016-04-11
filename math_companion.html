@@ -97,6 +97,34 @@ function Circumference_Circle_Radius(GeoForm)
 		GeoForm.cir_circumference.value =  "";
    	}
 }
+
+function Vol_Sphere(GeoForm)
+{
+	var sph_radius = GeoForm.Sphere_Radius.value;
+	var sphere_vol = (4/3) * Math.PI * Math.pow(sph_radius,3);
+	if (sph_radius >= 0)
+   	{
+		GeoForm.volume_sphere.value = sphere_vol;
+  	}
+	else
+   	{
+		GeoForm.volume_sphere.value =  "";
+   	}
+}
+
+function SA_Sphere(GeoForm)
+{
+	var rad = GeoForm.S_radius.value;
+	var surf_sphere = 4 * Math.PI * Math.pow(rad,2);
+	if (rad >= 0)
+   	{
+		GeoForm.surf_area_sphere.value = surf_sphere;
+  	}
+	else
+   	{
+		GeoForm.surf_area_sphere.value =  "";
+   	}
+}
 </SCRIPT>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ This Ends the JavaScript Script with Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -222,7 +250,46 @@ function Circumference_Circle_Radius(GeoForm)
 <!--End of Circumference of a Circle-->
 
 <br />
+<!--Volume of a Sphere-->
+<P>
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#A24702" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#A24702>Volume of a Sphere:</font></p>
+	<TD><NOBR><font size=3; color="white">Radius: <INPUT NAME="Sphere_Radius" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Vol_Sphere(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#B76A30">
+	<NOBR>Volume: <INPUT NAME="volume_sphere" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
 
+<P>
+<!--End of Volume of a Sphere-->
+
+<br />
+
+<!--Surface Area of a Sphere-->
+<P>
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#A24702" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#A24702>Surface Area of a Sphere:</font></p>
+	<TD><NOBR><font size=3; color="white">Radius: <INPUT NAME="S_radius" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="SA_Sphere(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#B76A30">
+	<NOBR>Surface Area: <INPUT NAME="surf_area_sphere" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Surface Area of a Sphere-->
+
+
+<br />
+<br />
+<hr color="#9A4402">
 <br />
 <br />
 <hr color="#9A4402">
