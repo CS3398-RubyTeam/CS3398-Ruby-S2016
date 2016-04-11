@@ -20,6 +20,8 @@ td.maptable {
     text-align: center;
 }
 
+.maptable tr:hover{background-color: #ddd;}
+
 .maptable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
