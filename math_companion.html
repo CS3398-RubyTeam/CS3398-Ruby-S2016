@@ -125,6 +125,111 @@ function SA_Sphere(GeoForm)
 		GeoForm.surf_area_sphere.value =  "";
    	}
 }
+
+function Area_Square(GeoForm)
+{
+	var side = GeoForm.Sq_Side.value;
+	var square_area = Math.pow(side,2);
+	if (side >= 0)
+   	{
+		GeoForm.sq_area.value = square_area;
+  	}
+	else
+   	{
+		GeoForm.sq_area.value =  "";
+   	}
+}
+
+function Vol_Cube(GeoForm)
+{
+	var cb_side = GeoForm.Cube_Side.value;
+	var cube_vol = Math.pow(cb_side,3);
+	if (cb_side >= 0)
+   	{
+		GeoForm.vol_cube.value = cube_vol;
+  	}
+	else
+   	{
+		GeoForm.vol_cube.value =  "";
+   	}
+}
+
+function Surface_Area_Cube(GeoForm)
+{
+	var cube_side_1 = GeoForm.Cube_Side_1.value;
+	var surf_cube = 6 * Math.pow(cube_side_1,2);
+	if (cube_side_1 >= 0)
+   	{
+		GeoForm.Surf_A_Cube.value = surf_cube;
+  	}
+	else
+   	{
+		GeoForm.Surf_A_Cube.value =  "";
+   	}
+}
+
+function Vol_Rectangle_Prism(GeoForm)
+{
+	var rt_length = GeoForm.Rect_Length_1.value;
+	var rt_width = GeoForm.Rect_Width_1.value;
+	var rt_height = GeoForm.Rect_Height_1.value;
+	var vol_rect_prism = eval(rt_length) * eval(rt_width) * eval(rt_height);
+	if (rt_length >= 0 && rt_width >= 0 && rt_height >= 0)
+   	{
+		GeoForm.Vol_Rect_Pr.value = vol_rect_prism;
+  	}
+	else
+   	{
+		GeoForm.Vol_Rect_Pr.value =  "";
+   	}
+}
+
+function Surface_Area_Rect_Prism(GeoForm)
+{
+	var rect_length_1 = GeoForm.Rect_Len_1.value;
+	var rect_width_2 = GeoForm.Rect_Wi_2.value;
+	var rect_height_3 = GeoForm.Rect_Hei_3.value;
+	var sa_rect_prism = 2 * ( (eval(rect_length_1)*eval(rect_width_2)) + (eval(rect_height_3)*eval(rect_length_1)) + (eval(rect_height_3)*eval(rect_width_2)) );
+	if (rect_length_1 >= 0 && rect_width_2 >= 0 && rect_height_3 >= 0)
+   	{
+		GeoForm.SA_Rect_Pr.value = sa_rect_prism;
+  	}
+	else
+   	{
+		GeoForm.SA_Rect_Pr.value =  "";
+   	}
+}
+
+function Volume_Cone(GeoForm)
+{
+	var cone_radius = GeoForm.Cone_Radius_1.value;
+	var cone_height = GeoForm.Cone_Height_1.value;
+	var cone_vol = (1/3) * Math.PI * Math.pow(cone_radius,2) * eval(cone_height);
+	if (cone_radius >= 0 && cone_height >= 0)
+   	{
+		GeoForm.Vol_Cone.value = cone_vol;
+  	}
+	else
+   	{
+		GeoForm.Vol_Cone.value =  "";
+   	}
+}
+
+function Surface_Area_Cylinder(GeoForm)
+{
+	var cylinder_radius = GeoForm.Cylinder_Radius.value;
+	var cylinder_height = GeoForm.Cylinder_Height.value;
+	var surf_cylinder = (2 * Math.PI * Math.pow(cylinder_radius,2))+(2 * Math.PI * eval(cylinder_radius) * eval(cylinder_height));
+	if (cylinder_radius >= 0 && cylinder_height >= 0)
+   	{
+		GeoForm.Surface_A_Cylinder.value = surf_cylinder;
+  	}
+	else
+   	{
+		GeoForm.Surface_A_Cylinder.value =  "";
+   	}
+}
+
 </SCRIPT>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ This Ends the JavaScript Script with Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -291,7 +396,173 @@ function SA_Sphere(GeoForm)
 <hr color="#9A4402">
 
 <br />
+
+<!--Area of a Square-->
+<P>
+<p align="center"><font size=6; color="#065416"><u>Squares and Cubes</u></font></p>
 <br />
+<br />
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#37914A" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#37914A>Area of a Square:</font></p>
+	<TD><NOBR><font size=3; color="white">Length of Side: <INPUT NAME="Sq_Side" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Area_Square(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#78C288">
+	<NOBR>Area: <INPUT NAME="sq_area" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Area of a Square-->
+
+<br />
+
+<!--Volume of a Cube-->
+<P>
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#37914A" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#37914A>Volume of a Cube:</font></p>
+	<TD><NOBR><font size=3; color="white">Side: <INPUT NAME="Cube_Side" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Vol_Cube(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#78C288">
+	<NOBR>Volume: <INPUT NAME="vol_cube" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Volume of a Cube-->
+
+<br />
+
+<!--Surface Area of a Cube-->
+<P>
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#37914A" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#37914A>Surface Area of a Cube:</font></p>
+	<TD><NOBR><font size=3; color="white">Side: <INPUT NAME="Cube_Side_1" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Surface_Area_Cube(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#78C288">
+	<NOBR>Surface Area: <INPUT NAME="Surf_A_Cube" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Surface Area of a Cube-->
+<br />
+<br />
+<hr color="#065416">
+
+<br />
+
+<!--Rectangular Prisms-->
+<P>
+<p align="center"><font size=6; color="#810704"><u>Rectangular Prisms</u></font></p>
+<br />
+<br />
+<!--Volume of a Rectangular Prisms-->
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#AB2320" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#AB2320>Volume of a Rectangular Prism:</font></p>
+	<TD><NOBR><font size=3; color="white">Length: <INPUT NAME="Rect_Length_1" SIZE=9></font></NOBR></TD><BR>
+	<TD><NOBR><font size=3; color="white">Width: <INPUT NAME="Rect_Width_1" SIZE=9></font></NOBR></TD>
+	<TD><NOBR><font size=3; color="white">Height: <INPUT NAME="Rect_Height_1" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Vol_Rectangle_Prism(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#C55E5B">
+	<NOBR>Volume: <INPUT NAME="Vol_Rect_Pr" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Volume of a Rectangular Prism-->
+
+
+<br />
+
+<!--Surface Area of a Rectangular Prism-->
+<P>
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#AB2320" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#AB2320>Surface Area of a Rectangular Prism:</font></p>
+	<TD><NOBR><font size=3; color="white">Length: <INPUT NAME="Rect_Len_1" SIZE=9></font></NOBR></TD><BR>
+	<TD><NOBR><font size=3; color="white">Width: <INPUT NAME="Rect_Wi_2" SIZE=9></font></NOBR></TD>
+	<TD><NOBR><font size=3; color="white">Height: <INPUT NAME="Rect_Hei_3" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Surface_Area_Rect_Prism(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#C55E5B">
+	<NOBR>Surface Area: <INPUT NAME="SA_Rect_Pr" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Surface Area of a Rectangular Prism-->
+<br />
+<br />
+<hr color="#810704">
+
+<br />
+
+<!--Cones and Cylinders-->
+<p>
+<p align="center"><font size=6; color="#62109B"><u>Cones and Cylinders</u></font></p>
+<br />
+<br />
+<!--Volume of a Cone-->
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#781CB8" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#781CB8>Volume of a Cone:</font></p>
+	<TD><NOBR><font size=3; color="white">Radius: <INPUT NAME="Cone_Radius_1" SIZE=9></font></NOBR></TD><BR>
+	<TD><NOBR><font size=3; color="white">Height: <INPUT NAME="Cone_Height_1" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Volume_Cone(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#A858DF">
+	<NOBR>Volume: <INPUT NAME="Vol_Cone" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Volume of a Cone-->
+
+<br />
+
+
+<!--Surface Area of a Cylinder-->
+<P>
+<FORM>
+<TABLE BORDER CELLPADDING=3; bgcolor="#781CB8" align="center">
+	<TR>
+	<p align="center"><font size=5; color=#781CB8>Surface Area of a Cylinder:</font></p>
+	<TD><NOBR><font size=3; color="white">Radius: <INPUT NAME="Cylinder_Radius" SIZE=9></font></NOBR></TD><BR>
+	<TD><NOBR><font size=3; color="white">Height: <INPUT NAME="Cylinder_Height" SIZE=9></font></NOBR></TD>
+	<TD><INPUT TYPE=BUTTON OnClick="Surface_Area_Cylinder(this.form);" VALUE="Calculate"></TD>
+	<TD ALIGN=RIGHT BGCOLOR="#A858DF">
+	<NOBR>Surface Area: <INPUT NAME="Surface_A_Cylinder" SIZE=9></NOBR></TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<P>
+<!--End of Surface Area of a Cylinder-->
+
+<br />
+<br />
+<hr color="#62109B">
+
+<br />
+
+
+
+
+
 
 
 
@@ -312,12 +583,6 @@ function SA_Sphere(GeoForm)
   <div>
 
   </div>
-
-
-
-
-
-
 
 </body>
 
