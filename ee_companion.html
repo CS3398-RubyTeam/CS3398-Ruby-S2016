@@ -30,12 +30,6 @@
 	</ul>
   
   	<div id="twoVar" class="tabcontent">
-		<form style ="font-family: Courier new;">
-			1st variable:<input id="inputOne" type="text" onkeyup="validate(this); copyVar('varOne', 'inputOne');" value="X" />
-		</form>
-		<form style ="font-family: Courier new;">
-			2nd variable:<input id="inputTwo" type="text" onkeyup="validate(this); copyVar('varTwo', 'inputTwo');" value="Y" />
-		</form>
 		<table class="maptable">
 		  <tr class="maptable">
 			<td class="maptable" id="varOne">X</th>
@@ -67,19 +61,16 @@
 			<td class="maptable" id="mantissa4" style = "color: blue"> D </td>
 			<td class="maptable" > 3 </td>
 		  </tr>
-		</table>	
+		</table>
+		<form style ="font-family: Courier new;">
+			1st variable:<input id="inputOne" type="text" onkeyup="validate(this); copyVar('varOne', 'inputOne');" value="X" />
+		</form>
+		<form style ="font-family: Courier new;">
+			2nd variable:<input id="inputTwo" type="text" onkeyup="validate(this); copyVar('varTwo', 'inputTwo');" value="Y" />
+		</form>
 	</div>
 
 	<div id="threeVar" class="tabcontent">
-		<form style ="font-family: Courier new;">
-			1st variable:<input id="inputOneM" type="text" onkeyup="validate(this); copyVar('varOneM', 'inputOneM');" value="X" />
-		</form>
-		<form style ="font-family: Courier new;">
-			2nd variable:<input id="inputTwoM" type="text" onkeyup="validate(this); copyVar('varTwoM', 'inputTwoM');" value="Y" />
-		</form>
-		<form style ="font-family: Courier new;">
-			3rd variable:<input id="inputThreeM" type="text" onkeyup="validate(this); copyVar('varThreeM', 'inputThreeM');" value="Z" />
-		</form>
 		<table class="maptable" >
 		  <tr class="maptable">
 			<td class="maptable" id="varOneM">X</th>
@@ -145,21 +136,18 @@
 			<td class="maptable" > 7 </td>
 		  </tr>
 		</table>
+		<form style ="font-family: Courier new;">
+			1st variable:<input id="inputOneM" type="text" onkeyup="validate(this); copyVar('varOneM', 'inputOneM');" value="X" />
+		</form>
+		<form style ="font-family: Courier new;">
+			2nd variable:<input id="inputTwoM" type="text" onkeyup="validate(this); copyVar('varTwoM', 'inputTwoM');" value="Y" />
+		</form>
+		<form style ="font-family: Courier new;">
+			3rd variable:<input id="inputThreeM" type="text" onkeyup="validate(this); copyVar('varThreeM', 'inputThreeM');" value="Z" />
+		</form>
 	</div>
 
 	<div id="fourVar" class="tabcontent">
-			<form style ="font-family: Courier new;">
-			1st variable:<input id="inputOneL" type="text" onkeyup="validate(this); copyVar('varOneL', 'inputOneL');" value="W" />
-		</form>
-		<form style ="font-family: Courier new;">
-			2nd variable:<input id="inputTwoL" type="text" onkeyup="validate(this); copyVar('varTwoL', 'inputTwoL');" value="X" />
-		</form>
-		<form style ="font-family: Courier new;">
-			3rd variable:<input id="inputThreeL" type="text" onkeyup="validate(this); copyVar('varThreeL', 'inputThreeL');" value="Y" />
-		</form>
-		<form style ="font-family: Courier new;">
-			4th variable:<input id="inputFourL" type="text" onkeyup="validate(this); copyVar('varFourL', 'inputFourL');" value="Z" />
-		</form>
 		<table class="maptable">
 		  <tr class="maptable">
 			<td class="maptable" id="varOneL">W</th>
@@ -298,6 +286,18 @@
 			<td class="maptable" > 15 </td>
 		  </tr>
 		</table>
+			<form style ="font-family: Courier new;">
+			1st variable:<input id="inputOneL" type="text" onkeyup="validate(this); copyVar('varOneL', 'inputOneL');" value="W" />
+		</form>
+		<form style ="font-family: Courier new;">
+			2nd variable:<input id="inputTwoL" type="text" onkeyup="validate(this); copyVar('varTwoL', 'inputTwoL');" value="X" />
+		</form>
+		<form style ="font-family: Courier new;">
+			3rd variable:<input id="inputThreeL" type="text" onkeyup="validate(this); copyVar('varThreeL', 'inputThreeL');" value="Y" />
+		</form>
+		<form style ="font-family: Courier new;">
+			4th variable:<input id="inputFourL" type="text" onkeyup="validate(this); copyVar('varFourL', 'inputFourL');" value="Z" />
+		</form>
 	</div>
 		<button onclick="myFunction()" align="right">generate</button>
 	<form style ="font-family: Courier new;">
