@@ -230,6 +230,84 @@ function Surface_Area_Cylinder(GeoForm)
    	}
 }
 
+function Area_Rhombus_Form_1(GeoForm)
+{
+	var rhom_diagonal_1 = GeoForm.Rhombus_Diagonal_1.value;
+	var rhom_diagonal_2 = GeoForm.Rhombus_Diagonal_2.value;
+	var area_rhombus_1 = (1/2) * eval(rhom_diagonal_1) * eval(rhom_diagonal_2);
+	if (rhom_diagonal_1 >= 0 && rhom_diagonal_2 >= 0)
+   	{
+		GeoForm.Area_Rhombus_F1.value = area_rhombus_1;
+  	}
+	else
+   	{
+		GeoForm.Area_Rhombus_F1.value =  "";
+   	}
+}
+
+function Area_Rhombus_Form_2(GeoForm)
+{
+	var rhom_base_1 = GeoForm.Rhombus_Base_1.value;
+	var rhom_base_2 = GeoForm.Rhombus_Base_2.value;
+	var rhom_height = GeoForm.Rhombus_Height.value;
+	var area_rhombus_2 = (1/2) * eval(rhom_height) * (eval(rhom_base_1)+eval(rhom_base_2));
+	if (rhom_base_1 >= 0 && rhom_base_2 >= 0 && rhom_height >= 0)
+   	{
+		GeoForm.Area_Rhombus_F2.value = area_rhombus_2;
+  	}
+	else
+   	{
+		GeoForm.Area_Rhombus_F2.value =  "";
+   	}
+}
+
+function Area_Trapezoid(GeoForm)
+{
+	var trapezoid_base_1 = GeoForm.Base_1_Trapezoid.value;
+	var trapezoid_base_2 = GeoForm.Base_2_Trapezoid.value;
+	var trapezoid_height = GeoForm.Trapezoid_Height.value;
+	var trap_area = ((eval(trapezoid_base_1)+eval(trapezoid_base_2))/2) * eval(trapezoid_height);
+	if (trapezoid_base_1 >= 0 && trapezoid_base_2 >= 0 && trapezoid_height >= 0)
+   	{
+		GeoForm.Trapezoid_A.value = trap_area;
+  	}
+	else
+   	{
+		GeoForm.Trapezoid_A.value =  "";
+   	}
+}
+
+function Area_Oval(GeoForm)
+{
+	var oval_long_axis = GeoForm.Oval_Long.value;
+	var oval_short_axis = GeoForm.Oval_Short.value;
+	var oval_area = Math.PI * eval(oval_long_axis) * eval(oval_short_axis);
+	if (oval_long_axis >= 0 && oval_short_axis >= 0)
+   	{
+		GeoForm.Oval_A.value = oval_area;
+  	}
+	else
+   	{
+		GeoForm.Oval_A.value =  "";
+   	}
+}
+
+function Volume_Ellipsoid(GeoForm)
+{
+	var ell_radius_1 = GeoForm.Ellipsoid_Radius_1.value;
+	var ell_radius_2 = GeoForm.Ellipsoid_Radius_2.value;
+	var ell_radius_3 = GeoForm.Ellipsoid_Radius_3.value;
+	var ellipsoid_vol = Math.PI * (4/3) * eval(ell_radius_1) * eval(ell_radius_2) * eval(ell_radius_3);
+	if (ell_radius_1 >= 0 && ell_radius_2 >= 0 && ell_radius_3 >= 0)
+   	{
+		GeoForm.Ell_Volume.value = ellipsoid_vol;
+  	}
+	else
+   	{
+		GeoForm.Ell_Volume.value =  "";
+   	}
+}
+
 </SCRIPT>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ This Ends the JavaScript Script with Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
