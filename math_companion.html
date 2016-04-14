@@ -308,6 +308,59 @@ function Volume_Ellipsoid(GeoForm)
    	}
 }
 
+function Midpoint(GeoForm)
+{
+	var mid_x_1 = GeoForm.Midpoint_X_1.value;
+	var mid_x_2 = GeoForm.Midpoint_X_2.value;
+	var mid_y_1 = GeoForm.Midpoint_Y_1.value;
+	var mid_y_2 = GeoForm.Midpoint_Y_2.value;
+	var x_middle = ((eval(mid_x_1)+eval(mid_x_2))/2);
+	var y_middle = ((eval(mid_y_1)+eval(mid_y_2))/2);
+
+	GeoForm.Midpoint_X_Val.value = x_middle;
+	GeoForm.Midpoint_Y_Val.value = y_middle;
+}
+
+function Distance(GeoForm)
+{
+	var dist_x_1 = GeoForm.Distance_X_1.value;
+	var dist_x_2 = GeoForm.Distance_X_2.value;
+	var dist_y_1 = GeoForm.Distance_Y_1.value;
+	var dist_y_2 = GeoForm.Distance_Y_2.value;
+	var x_difference = eval(dist_x_2)-eval(dist_x_1);
+	var y_difference = eval(dist_y_2)-eval(dist_y_1);
+	var dist = Math.sqrt( Math.pow(x_difference,2)+Math.pow(y_difference,2) );
+
+	GeoForm.Distance_Formula_Sol.value = dist;
+}
+
+function Slope(GeoForm)
+{
+	var slope_x_1 = GeoForm.Slope_X_1.value;
+	var slope_x_2 = GeoForm.Slope_X_2.value;
+	var slope_y_1 = GeoForm.Slope_Y_1.value;
+	var slope_y_2 = GeoForm.Slope_Y_2.value;
+	var slope_x_difference = eval(slope_x_2)-eval(slope_x_1);
+	var slope_y_difference = eval(slope_y_2)-eval(slope_y_1);
+	var slope_total = slope_y_difference/slope_x_difference;
+
+	GeoForm.Slope_Solution.value = slope_total;
+}
+
+function Quadratic_Formula(GeoForm)
+{
+	var quadratic_a = GeoForm.Quad_A.value;
+	var quadratic_b = GeoForm.Quad_B.value;
+	var quadratic_c = GeoForm.Quad_C.value;
+
+	var x_1_positive = ((quadratic_b*(-1)) + Math.sqrt(Math.pow(quadratic_b,2)-(4*quadratic_a*quadratic_c)))/(2*quadratic_a);
+	var x_2_negative = ((quadratic_b*(-1)) - Math.sqrt(Math.pow(quadratic_b,2)-(4*quadratic_a*quadratic_c)))/(2*quadratic_a);
+
+	GeoForm.Quad_Formula_X_1.value = x_1_positive;
+	GeoForm.Quad_Formula_X_2.value = x_2_negative;
+}
+
+
 </SCRIPT>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ This Ends the JavaScript Script with Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
