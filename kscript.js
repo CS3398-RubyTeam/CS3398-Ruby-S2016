@@ -35,15 +35,15 @@ function copyVar(destinationId, sourceId) {
 function changeRowColor(id, num){
 		if( truthValue[num] == "D")
 	{
-		document.getElementById(id).style.backgroundColor = "#AE9EFF";
+		document.getElementById(id).style.backgroundColor = "#BCC1C4";
 	}
 	else if( truthValue[num] == 1)
 	{
-		document.getElementById(id).style.backgroundColor = "#FF9EBE";
+		document.getElementById(id).style.backgroundColor = "#F7C2B0";
 	}
 	else if( truthValue[num] == 0)
 	{
-		document.getElementById(id).style.backgroundColor = "#9EFFDE ";
+		document.getElementById(id).style.backgroundColor = "#C2F7B0";
 	}
 }
 // Changes the truth value from D to 1 to 0 back to dont care D.
