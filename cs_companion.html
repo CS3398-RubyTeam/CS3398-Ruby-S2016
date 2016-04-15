@@ -14,6 +14,319 @@
     <header>
       <h1>Computer Science Toolbox</h1>
     </header>
+    
+    <div style="background-color:#AAAAAA; width:100%;">
+	<br />
+    <br />
+	<h4><blockquote>Number Base Converter:</blockquote></h4>
+
+	<table width="75%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" 	
+    	bgcolor="#E2E2E2">
+    	<tr>
+    		<td colspan="2" align="left">
+    			<h5><blockquote>Enter a number and choose the type entered:</blockquote></h5>
+    		</td>
+    	</tr>
+
+    	<tr>
+        	<td style="width:15%;">
+            	<blockquote><input id="number_input">
+        	</td>
+        	<td style="width:35%" align="left";>
+            	<p id="message_box">no type yet specified</p>
+        	</td>
+    	</tr>
+    	<tr>
+        	<td colspan="2">
+            <blockquote>
+        		<button type="button" onclick="chooseDec()">Decimal</button>
+        		<button type="button" onclick="chooseBin()">Binary</button>
+        		<button type="button" onclick="chooseHex()">Hexadecimal</button>
+        		<button type="button" onclick="chooseOctal()">Octal</button>
+                <button type="button" onclick="convert()">Convert</button>
+                </blockquote>
+        	</td>
+    	</tr>
+		<tr>
+    		<td colspan="2" align="center">
+            <hr />
+			</td>
+        </tr>
+		
+<tr>
+        	<td style="width:15%;">
+            <blockquote>
+            	<input id="dec_number"><p>Decimal</p></blockquote>
+        	</td>
+            <td style="width:15%;">
+            <blockquote>
+            	<input id="hex_number"><p>
+Hex</p></blockquote>
+        	</td>
+		</tr>
+        <tr>
+        
+        	<td style="width:15%;">
+            <blockquote>
+            	<input id="bin_number"><p>
+Binary</p></blockquote>
+        	</td>
+            <td style="width:15%;">
+            	<blockquote><input id="oct_number"><p>Octal</p></blockquote>
+        	</td>
+		</tr>		
+            
+	</table>
+
+	<script>
+var number_type = '0';
+var DecimalQueue = [];
+var BinaryQueue = [];
+var HexQueue = [];
+var temp_holder = [];
+var decimal_number;
+var binary_number;
+var hexadecimal_number;
+var octal_number;
+
+
+		function chooseDec() 
+		{
+   			document.getElementById("message_box").innerHTML = "  Input Number is Decimal";
+			number_type = 'd';
+            //decimal_number = document.getElementById("number_input").value;
+		}
+
+		function chooseBin() 
+		{
+  	 	  document.getElementById("message_box").innerHTML = "  Input Number is Binary";
+		  number_type = 'b';
+          //binary_number = document.getElementById("number_input").value;
+		}
+
+		function chooseHex() 
+		{
+   		  document.getElementById("message_box").innerHTML = "  Input Number is Hexadecimal";
+		  number_type = 'h';
+          //hexadecimal_number = document.getElementById("number_input").value;
+		}
+
+		function chooseOctal() 
+		{
+   		   document.getElementById("message_box").innerHTML = "  Input Number is Octal";
+		  number_type = 'o';
+            //octal_number = document.getElementById("number_input").value;
+		}
+		
+		function convert()
+		{
+			switch(number_type)
+			{
+				case 'd':
+                    decimal_number = document.getElementById("number_input").value;
+                    document.getElementById("dec_number").value = decimal_number;
+					convertDecimalToBinary();
+                    convertDecimalToHex();
+                    convertDecimalToOctal();
+					break;
+				case 'b':
+                    binary_number = document.getElementById("number_input").value;
+                    document.getElementById("bin_number").value = binary_number;
+					convertBinaryToDecimal();
+                    convertDecimalToHex();
+                    convertDecimalToOctal();
+					break;
+				case 'h':
+                    hexadecimal_number = document.getElementById("number_input").value;
+                    document.getElementById("hex_number").value = hexadecimal_number;
+					convertHexToDecimal();
+                    convertDecimalToBinary();
+                    convertDecimalToOctal();
+					break;
+				case 'o':
+                    octal_number = document.getElementById("number_input").value;
+                    document.getElementById("oct_number").value = octal_number;
+                    convertOctalToDecimal();
+			        convertDecimalToBinary();
+                    convertDecimalToHex();
+					break;
+				default:
+					document.getElementById("message_box").innerHTML = "  No number yet specified.  Try again";
+					break;
+			}	
+		}
+
+
+function convertDecimalToBinary()
+{
+	var string_holder = 0;
+	var iteration = 0;
+	var counter;
+    var number = decimal_number;	
+	//number = document.getElementById("number_input").value;
+	document.getElementById("dec_number").value = number;
+/*update binary*/	
+	while(number != 0)
+	{
+			BinaryQueue.unshift(number%2);	//push remainder
+			if(number%2 == 0)
+				number = number/2
+			else
+				if(number%2 == 1)
+				{
+					number = number - 1;
+					number = number/2;
+				}
+				iteration++;	
+	}
+
+	string_holder = BinaryQueue.join("");
+	/*clear queue*/
+	for(counter = 0; counter < iteration; counter++)
+	{
+		BinaryQueue.pop();
+	}
+	document.getElementById("bin_number").value = string_holder.toString();
+    number = document.getElementById("dec_number").value    //reset the number to dec.
+    /*special case if zero*/
+    if(decimal_number == 0)
+        document.getElementById("bin_number").value = 0;
+}
+
+
+function convertDecimalToHex()
+{
+    var base_number = 16;
+    var temp_digit; //holds temporary digit
+	var string_holder = 0;
+	var iteration = 0;
+	var counter;
+    var number = decimal_number;
+
+	while(number != 0)
+	{
+            temp_digit = number%base_number;
+            if(temp_digit < 10)
+            {
+			     HexQueue.unshift(temp_digit);	//push remainder
+            }
+            else
+            {
+                switch(temp_digit)
+                {
+                    case 10:
+                        HexQueue.unshift('A');
+                        break;
+                    case 11:
+                        HexQueue.unshift('B');
+                        break;	
+                    case 12:
+                        HexQueue.unshift('C');
+                        break;
+                    case 13:
+                        HexQueue.unshift('D');
+                        break;
+                    case 14:
+                        HexQueue.unshift('E');
+                        break;
+                    case 15:
+                        HexQueue.unshift('F');
+                        break;
+                    default:
+                        break;
+                }
+            }
+            number = Math.floor(number/base_number);
+            iteration++;
+	}
+
+	string_holder = HexQueue.join("");
+	/*clear queue*/
+	for(counter = 0; counter < iteration; counter++)
+	{
+		HexQueue.pop();
+	}
+	document.getElementById("hex_number").value = string_holder.toString();
+    if(decimal_number == 0)
+        document.getElementById("hex_number").value = 0;
+}
+
+
+function convertDecimalToOctal()
+{
+    var base_number = 8;
+    var temp_digit; //holds temporary digit
+	var string_holder = 0;
+	var iteration = 0;
+	var counter;
+    var number = decimal_number;
+
+	while(number != 0)
+	{
+            temp_digit = number%base_number;
+            //if(temp_digit < 10)
+			BinaryQueue.unshift(temp_digit);	//push remainder
+
+            number = Math.floor(number/base_number);
+            iteration++;
+	}
+
+	string_holder = BinaryQueue.join("");
+	/*clear queue*/
+	for(counter = 0; counter < iteration; counter++)
+	{
+		BinaryQueue.pop();
+	}
+	document.getElementById("oct_number").value = string_holder.toString();
+    if(decimal_number == 0)
+       document.getElementById("oct_number").value = 0;
+}
+
+
+function convertBinaryToDecimal()
+{
+    var remainder;
+    decimal_number = 0;
+    var counter = 0;
+
+    while(binary_number != 0)
+    {
+        remainder = binary_number%10;
+        binary_number = Math.floor(binary_number/10);
+        decimal_number = decimal_number + remainder*Math.pow(2,counter);
+        ++counter;
+    }
+	document.getElementById("dec_number").value = decimal_number;
+}
+
+function convertHexToDecimal()
+{
+    var string_holder = hexadecimal_number.toString();
+    decimal_number = parseInt(string_holder, 16);    
+    //(305441741).toString(16) = "1234abcd" //to convert back...
+    document.getElementById("dec_number").value = decimal_number;
+}
+
+function convertOctalToDecimal()
+{
+    var remainder;
+    decimal_number = 0;
+    var counter = 0;
+
+    while(octal_number != 0)
+    {
+        remainder = octal_number%10;
+        octal_number = Math.floor(octal_number/10);
+        decimal_number = decimal_number + remainder*Math.pow(8,counter);
+        ++counter;
+    }
+	document.getElementById("dec_number").value = decimal_number;
+}
+				
+	</script>
+<br />
+<br />
+	</div>
     <section>
         <div id="overlay"></div>
   <div id="shadowbox"> 
@@ -36,7 +349,6 @@
 
     </div>
   </nav>
-  <div>
 
   </div>
 
