@@ -1,10 +1,20 @@
 ////////////////////////////////////////////////////////////
-//------------------ ee companion ------------------------//
+//------------------ k-scrip -----------------------------//
 ////////////////////////////////////////////////////////////
 
 //Create the truth table values and populate with dont cares.
 var truthValue = [];
 for(i = 0; i < 16; i++){truthValue[i] = "D";}
+
+/* ***Note class tab, tabcontent, keytable, and maptable are 
+ all in kmapstyle.ss */
+
+//new classes truthTable and table input
+function truthTable(){
+   this.truthValue = [];
+}
+function tableInput () {	
+}
 
 //Counts the number of tabs in the k-map variables
 function numOfVar(evt, cityName) {
