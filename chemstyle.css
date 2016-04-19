@@ -1,0 +1,129 @@
+body{
+  background-color: #fff; 
+  background-image: 
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+  margin:0;
+  font-family:'Open Sans', arial;
+}
+h1{
+
+  padding:40px;
+ font-weight: 500; 
+  margin:0px;
+}
+#sitetitle{
+  font-size:30px;
+  padding: 0 20px 50px 0;
+  font-weight:300
+  
+}
+section{padding:0 40px;}
+nav{
+  position:fixed;
+  width:160px; 
+   background:#ddd;
+  top:0;
+  bottom:0;
+  padding:20px;
+}
+nav ul{
+  margin: 0; 
+  padding:0;
+}
+nav ul li{
+  display:block;
+  margin: 10px 0;
+}
+nav ul li a{
+  background: #aaa;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color:white;
+  border-radius: 5px;
+font-size:14px
+}
+nav ul li a i{
+ margin-right:10px;
+  font-size:20px !important;
+  
+}
+nav ul li a:hover{
+  background:#333;
+}
+#main{
+  margin-left:200px;
+}
+#chem:hover, #chem.active{
+  background:green;
+}
+#math:hover{
+  background:blue;
+}
+#cs:hover{
+  background:red;
+}
+#ee:hover{
+  background:purple;
+}
+.box {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  Text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+#ebox {
+  margin: 1px;
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#shadowbox{
+  position:fixed; 
+  top:50%;
+  left:50%;
+  padding:20px;
+  background: white; 
+  display:none;
+}
+#overlay{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+}
+.am {
+  background: orange
+}
+.aem {
+  background: yellow
+}
+.sm {
+  background: lightgreen
+}
+.tm {
+  background: pink
+}
+.nm{
+  background:lightblue;
+}
+.h {
+  background: purple
+}
+.ng {
+  background: indigo
+}
+.bm {
+  background: green
+}
