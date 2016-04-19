@@ -54,6 +54,8 @@ nav ul li a:hover{
   background:#333;
 }
 #main{
+  margin-left:200px;
+}
 #chem:hover, #chem.active{
   background:green;
 }
