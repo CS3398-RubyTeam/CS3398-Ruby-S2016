@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,800italic,800,700italic,700,600italic,600,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+/* Dropdown Button */
+.dropbtn {
+    background-color: #888888;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+-->
+</style>
+
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <h1>Computer Science Toolbox</h1>
+    </header>
+    	<br />
+    <br />
+<hr />
+	<h4><blockquote>Resistor Component calculator:</blockquote></h4>
+
+	
+
+<script>
+
+var tens_digit;
+var ones_digit;
+var multiplier;
+var total_value;
+var tolerance;
+
+var band1_flag = 0;
+var band2_flag = 0;
+var band3_flag = 0;
+var band4_flag = 0;
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function firstColor() {
+    document.getElementById("Color1").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function secondColor() {
+    document.getElementById("Color2").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function thirdColor() {
+    document.getElementById("Color3").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function fourthColor() {
+    document.getElementById("Color4").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function updateBand(input_band, input_value)
+{
+    var band_one_two_color = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"];
+    var band_three_color = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Gold", "Silver"];
+    var band_four_color = ["Brown", "Red","Green", "Blue", "Purple", "Grey", "Gold", "Silver"];
+    var band_one_two_value = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var band_three_value = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 0.1, 0.01];
+    var band_four_value = ["1%", "2%", "0.5%", ".025%", ".01%", ".0.5%", "5%", "10%"];
+
+    switch(input_band)
+    {
+        case 1:
+			document.getElementById("band1").style.backgroundColor = band_one_two_color[input_value];
+            document.getElementById("first_band").value = "tens digit:  " + band_one_two_value[input_value];
+            tens_digit = 10*band_one_two_value[input_value];
+            band1_flag = 1;
+            break;
+        case 2:
+			document.getElementById("band2").style.backgroundColor = band_one_two_color[input_value];
+            document.getElementById("second_band").value = "ones digit:  " + band_one_two_value[input_value];
+            ones_digit = band_one_two_value[input_value];
+            band2_flag = 1;
+            break;
+        case 3:
+			document.getElementById("band3").style.backgroundColor = band_three_color[input_value];
+            document.getElementById("third_band").value = "times  " + band_three_value[input_value];
+            multiplier = band_three_value[input_value];
+            band3_flag = 1;
+            break;
+        case 4:
+			document.getElementById("band4").style.backgroundColor = band_four_color[input_value];
+            document.getElementById("fourth_band").value = band_four_color[input_value] + ":   +/-" + band_four_value[input_value];
+            tolerance = band_one_two_value[input_value];
+            band4_flag = 1;
+            break;
+        default:
+            break;
+    }
+
+    if(band1_flag == 1 && band2_flag == 1 && band3_flag == 1 && band4_flag == 1)
+    {
+        total_value = (tens_digit + ones_digit)*multiplier;
+        document.getElementById("resistor_value").value = total_value;
+    }
+}
+				
+	</script>
+<br />
+<br />
+    <section>
+        <div id="overlay"></div>
+  <div id="shadowbox"> 
+    <div id="sbname"></div>
+    <div id="sbam"></div>
+  </div>
+  
+<blockquote><blockquote>
+<table width="600px" height="180" border="0" align="left" cellpadding="0" cellspacing="0" 	
+    	bgcolor="#EEE">
+    <tr>
+        <td bgcolor="#EEE" width="165"><img src="Left_Resistor_BG.png" width="165" height="160" align="right" /></td>
+      <td bgcolor="#EEE" width="30" id="band1"></td>
+      <td bgcolor="#CC9966" width="50"></td>
+      <td bgcolor="#EEE" width="30" id="band2"></td>
+      <td bgcolor="#CC9966" width="50"></td>
+      <td bgcolor="#EEE" width="30" id="band3"></td>
+      <td bgcolor="#CC9966" width="50"></td>
+      <td bgcolor="#EEE" width="30" id="band4"></td>
+      <td bgcolor="#EEE" width="165"><img src="Right_Resistor_BG.png" width="165" height="160" align="left" /></td>
+    </tr>
+ <tr>
+        <td bgcolor="#EEE" colspan="9" ><p></p></br> </p></td> 
+</tr>
+</table>        
+</blockquote></blockquote>
+</br> 
+
+<table align="center" cellpadding="0" cellspacing="0">
+<td>
+</br>
+
+<input id="resistor_value"><p>Value in Ohms</p>
+
+
+</td>
+</table>
+
+<table width="75%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" 	
+    	bgcolor="#EEE">       
+<tr>
+<td>
+            	
+<input id="first_band"><p>First Band</p>
+
+        	</td>
+            <td>
+            	<input id="second_band"><p>
+Second Band</p>
+        	</td>
+            <td>
+            	<input id="third_band"><p>
+Third Band</p>
+        	</td>
+            <td>
+            	<input id="fourth_band"><p>
+Fourth Band</p>
+        	</td>
+		</tr>
+    <tr> 
+<td>
+	<div class="dropdown">
+  <button onclick="firstColor()" class="dropbtn">Select Color 1</button>
+  <div id="Color1" class="dropdown-content">
+    <a href="#" onclick="updateBand(1, 0)">Black</a>
+    <a href="#" onclick="updateBand(1, 1)">Brown</a>
+    <a href="#" onclick="updateBand(1, 2)">red</a>
+	<a href="#" onclick="updateBand(1, 3)">Orange</a>
+    <a href="#" onclick="updateBand(1, 4)">Yellow</a>
+    <a href="#" onclick="updateBand(1, 5)">Green</a>
+	<a href="#" onclick="updateBand(1, 6)">Blue</a>
+    <a href="#" onclick="updateBand(1, 7)">Purple</a>
+    <a href="#" onclick="updateBand(1, 8)">Grey</a>
+	<a href="#" onclick="updateBand(1, 9)">White</a>
+  </div>
+</div>
+</td>
+<td>
+	<div class="dropdown">
+  <button onclick="secondColor()" class="dropbtn">Select Color 2</button>
+  <div id="Color2" class="dropdown-content">
+    <a href="#" onclick="updateBand(2, 0)">Black</a>
+    <a href="#" onclick="updateBand(2, 1)">Brown</a>
+    <a href="#" onclick="updateBand(2, 2)">red</a>
+	<a href="#" onclick="updateBand(2, 3)">Orange</a>
+    <a href="#" onclick="updateBand(2, 4)">Yellow</a>
+    <a href="#" onclick="updateBand(2, 5)">Green</a>
+	<a href="#" onclick="updateBand(2, 6)">Blue</a>
+    <a href="#" onclick="updateBand(2, 7)">Purple</a>
+    <a href="#" onclick="updateBand(2, 8)">Grey</a>
+	<a href="#" onclick="updateBand(2, 9)">White</a>
+  </div>
+</div>
+</td>
+<td>
+	<div class="dropdown">
+  <button onclick="thirdColor()" class="dropbtn">Select Color 3</button>
+  <div id="Color3" class="dropdown-content">
+    <a href="#" onclick="updateBand(3, 0)">Black</a>
+    <a href="#" onclick="updateBand(3, 1)">Brown</a>
+    <a href="#" onclick="updateBand(3, 2)">red</a>
+	<a href="#" onclick="updateBand(3, 3)">Orange</a>
+    <a href="#" onclick="updateBand(3, 4)">Yellow</a>
+    <a href="#" onclick="updateBand(3, 5)">Green</a>
+	<a href="#" onclick="updateBand(3, 6)">Blue</a>
+    <a href="#" onclick="updateBand(3, 7)">Purple</a>
+    <a href="#" onclick="updateBand(3, 8)">Gold</a>
+    <a href="#" onclick="updateBand(3, 9)">Silver</a>
+  </div>
+</div>
+</td>
+<td>
+	<div class="dropdown">
+  <button onclick="fourthColor()" class="dropbtn">Select Color 4</button>
+  <div id="Color4" class="dropdown-content">
+    <a href="#" onclick="updateBand(4, 0)">Brown</a>
+    <a href="#" onclick="updateBand(4, 1)">red</a>
+    <a href="#" onclick="updateBand(4, 2)">Green</a>
+	<a href="#" onclick="updateBand(4, 3)">Blue</a>
+    <a href="#" onclick="updateBand(4, 4)">Purple</a>
+    <a href="#" onclick="updateBand(4, 5)">Grey</a>
+    <a href="#" onclick="updateBand(4, 6)">Gold</a>
+    <a href="#" onclick="updateBand(4, 7)">Silver</a>
+  </div>
+</div>
+</td>
+</tr>
+
+</table>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+
+</body>
+    </section>
+  </div>
+  <nav>
+    <div id="sitetitle">CS Companion</div>
+      <ul>
+        <li><a href="chemistry_companion.html" id="chem"><i class="fa fa-flask fa-fw"></i>Chem Toolbox</a></li>
+        <li><a href="math_companion.html" id="math"><i class="fa fa-calculator fa-fw"></i>Math Toolbox</a></li>
+        <li><a href="cs_companion.html" id="cs"class="active"><i class="fa fa-laptop fa-fw"></i>CS Toolbox</a></li>
+        <li><a href="ee_companion.html" id="ee"><i class="fa fa-bolt fa-fw"></i>EE Toolbox</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  </div>
+
+</body>
+
+</html>
+
