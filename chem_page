@@ -8,6 +8,7 @@
 <body>
   <div id="main">
     <header>
+      <input id="color_picker" type="color" onchange="showHex();"> <span id="color_hex_value"></span>
       <h1>Chemistry Toolbox</h1>
     </header>
     <section>
@@ -16,9 +17,12 @@
     <div id="sbname"></div>
     <div id="sbam"></div>
   </div>
+   <a id="play-game" href="http://picotekdesign.com/chemistry_companion_game.html"
+     <h1>Play a Game!</h1> 
+   </a>
   
   <div>
-    <div class="box nm" name="Hydrogen" am="1">H <br> 1 </br></div>
+    <div class="box nm" name="Hydrogen (1.008)" am="1">H <br> 1 </br></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
@@ -35,14 +39,14 @@
     <div id="ebox"></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
-    <div class="box ng" name="Helium ng" am="2">He <br> 2 </br></div>
+      <div class="box ng" name="Helium (4.002)" am="2"> He <br> 2 </br></div>
 
 
   </div>
 
   <div>
-    <div class="box am" name= "Lithium" am="3">Li <br> 3 </br> </div>
-    <div class="box aem" name= "Beryllium" am="4">Be <br> 4 </br> </div>
+    <div class="box am" name= "Lithium (6.94)" am="3">Li <br> 3 </br> </div>
+    <div class="box aem" name= "Beryllium (9.01)" am="4">Be <br> 4 </br> </div>
     <div id="ebox"></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
@@ -53,17 +57,17 @@
     <div id="ebox"></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
-    <div class="box sm" name= "Boron" am="5">B <br> 5 </br> </div>
-    <div class="box nm" name= "Carbon" am="6">C <br> 6 </br> </div>
-    <div class="box nm" name= "Nitrogen" am="7">N <br> 7 </br> </div>
-    <div class="box nm" name= "Oxygen" am="8">O <br> 8 </br> </div>
-    <div class="box h" name= "Fluorine" am="9">F <br> 9 </br> </div>
-    <div class="box ng" name= "Neon" am="10">Ne <br> 10 </br> </div>
+    <div class="box sm" name= "Boron (10.81)" am="5">B <br> 5 </br> </div>
+    <div class="box nm" name= "Carbon (12.01)" am="6">C <br> 6 </br> </div>
+    <div class="box nm" name= "Nitrogen (14.01)" am="7">N <br> 7 </br> </div>
+    <div class="box nm" name= "Oxygen (16.00)" am="8">O <br> 8 </br> </div>
+    <div class="box h" name= "Fluorine (19.00)" am="9">F <br> 9 </br> </div>
+    <div class="box ng" name= "Neon (20.18)" am="10">Ne <br> 10 </br> </div>
   </div>
 
   <div>
-    <div class="box am" name= "Sodium" am="11">Na <br> 11 </br> </div>
-    <div class="box aem" name= "Magnesium" am="12">Mg <br> 12 </br> </div>
+    <div class="box am" name= "Sodium (22.99)" am="11">Na <br> 11 </br> </div>
+    <div class="box aem" name= "Magnesium(24.31)" am="12">Mg <br> 12 </br> </div>
     <div id="ebox"></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
@@ -74,130 +78,130 @@
     <div id="ebox"></div>
     <div id="ebox"></div>
     <div id="ebox"></div>
-    <div class="box bm" name= "Aluminum" am="13">Al <br> 13 </br> </div>
-    <div class="box sm" name= "Silicon" am="14">Si <br> 14 </br> </div>
-    <div class="box nm" name= "Phosphorus" am="15">P <br> 15 </br> </div>
-    <div class="box nm" name= "Sulfur" am="16">S <br> 16 </br> </div>
-    <div class="box h" name= "Chlorine" am="17">Cl <br> 17 </br> </div>
-    <div class="box ng" name= "Argon" am="18">Ar <br> 18 </br> </div>
+    <div class="box bm" name= "Aluminum (26.98)" am="13">Al <br> 13 </br> </div>
+    <div class="box sm" name= "Silicon (28.09)" am="14">Si <br> 14 </br> </div>
+    <div class="box nm" name= "Phosphorus (30.97)" am="15">P <br> 15 </br> </div>
+    <div class="box nm" name= "Sulfur (32.06)" am="16">S <br> 16 </br> </div>
+    <div class="box h" name= "Chlorine (35.45)" am="17">Cl <br> 17 </br> </div>
+    <div class="box ng" name= "Argon (39.95)" am="18">Ar <br> 18 </br> </div>
   </div>
 
   <div>
-    <div class="box am" name= "Potassium" am="19">K <br> 19 </br> </div>
-    <div class="box aem" name= "Calcium" am="20">Ca <br> 20 </br> </div>
-    <div class="box tm" name= "Scandium" am="21">Sc <br> 21 </br> </div>
-    <div class="box tm"name= "Titanium" am="22">Ti <br> 22 </br> </div>
-    <div class="box tm" name= "Vanadium" am="23">V <br> 23 </br> </div>
-    <div class="box tm"name= "Chromium" am="24">Cr <br> 24 </br> </div>
-    <div class="box tm" name= "Manganese" am="25">Mn <br> 25 </br> </div>
-    <div class="box tm" name= "Iron" am="26">Fe <br> 26 </br> </div>
-    <div class="box tm" name= "Cobalt" am="27">Co <br> 27 </br> </div>
-    <div class="box tm" name= "Nickel" am="28">Ni <br> 28 </br> </div>
-    <div class="box tm" name= "Copper" am="29">Cu <br> 29 </br> </div>
-    <div class="box tm" name= "Zinc" am="30">Zn <br> 30 </br> </div>
-    <div class="box bm" name= "Gallium" am="31">Ga <br> 31 </br> </div>
-    <div class="box sm" name= "Germanium" am="32">Ge <br> 32 </br> </div>
-    <div class="box sm" name= "Arsenic" am="33">As <br> 33 </br> </div>
-    <div class="box nm" name= "Selenium" am="34">Se <br> 34 </br> </div>
-    <div class="box h" name= "Bromine" am="35">Br <br> 35 </br> </div>
-    <div class="box ng" name= "Krypton" am="36">Kr <br> 36 </br> </div>
+    <div class="box am" name= "Potassium (39.10)" am="19">K <br> 19 </br> </div>
+    <div class="box aem" name= "Calcium (40.08)" am="20">Ca <br> 20 </br> </div>
+    <div class="box tm" name= "Scandium (44.96)" am="21">Sc <br> 21 </br> </div>
+    <div class="box tm"name= "Titanium (47.87)" am="22">Ti <br> 22 </br> </div>
+    <div class="box tm" name= "Vanadium (50.94)" am="23">V <br> 23 </br> </div>
+    <div class="box tm"name= "Chromium (52.00)" am="24">Cr <br> 24 </br> </div>
+    <div class="box tm" name= "Manganese (54.94)" am="25">Mn <br> 25 </br> </div>
+    <div class="box tm" name= "Iron (55.85)" am="26">Fe <br> 26 </br> </div>
+    <div class="box tm" name= "Cobalt (58.93)" am="27">Co <br> 27 </br> </div>
+    <div class="box tm" name= "Nickel (58.69)" am="28">Ni <br> 28 </br> </div>
+    <div class="box tm" name= "Copper (63.55)" am="29">Cu <br> 29 </br> </div>
+    <div class="box tm" name= "Zinc (65.38)" am="30">Zn <br> 30 </br> </div>
+    <div class="box bm" name= "Gallium (69.72)" am="31">Ga <br> 31 </br> </div>
+    <div class="box sm" name= "Germanium (72.63)" am="32">Ge <br> 32 </br> </div>
+    <div class="box sm" name= "Arsenic (74.92)" am="33">As <br> 33 </br> </div>
+    <div class="box nm" name= "Selenium (78.97)" am="34">Se <br> 34 </br> </div>
+    <div class="box h" name= "Bromine (79.90)" am="35">Br <br> 35 </br> </div>
+    <div class="box ng" name= "Krypton (83.80)" am="36">Kr <br> 36 </br> </div>
   </div>
 
   <div>
-    <div class="box am" name= "Rubidium" am="37">Rb <br> 37 </br> </div>
-    <div class="box aem" name= "Strontium" am="38">Sr <br> 38 </br> </div>
-    <div class="box tm" name= "Yttrium" am="39">Y <br> 39 </br> </div>
-    <div class="box tm" name= "Zirconium" am="40">Zr <br> 40 </br> </div>
-    <div class="box tm" name= "Niobium" am="41">Nb <br> 41 </br> </div>
-    <div class="box tm" name= "Molybdenur" am="42">Mo <br> 42 </br> </div>
-    <div class="box tm" name= "Technetium" am="43">Tc <br> 43 </br> </div>
-    <div class="box tm" name= "Ruthenium" am="44">Ru <br> 44 </br> </div>
-    <div class="box tm" name= "Rhodium" am="45">Rh <br> 45 </br> </div>
-    <div class="box tm" name= "Palladium" am="46">Pd <br> 46 </br> </div>
-    <div class="box tm" name= "Silver" am="47">Ag <br> 47 </br> </div>
-    <div class="box tm" name= "Cadmium" am="48">Cd <br> 48 </br> </div>
-    <div class="box bm" name= "Indium" am="49">In <br> 49 </br> </div>
-    <div class="box bm" name= "Tin" am="50">Sn <br> 50 </br> </div>
-    <div class="box sm" name= "Antimony" am="51">Sb <br> 51 </br> </div>
-    <div class="box sm" name= "Tellerium" am="52">Te <br> 52 </br> </div>
-    <div class="box h" name= "Iodine" am="53">I <br> 53 </br> </div>
-    <div class="box ng" name= "Xenon" am="54">Xe <br> 54 </br> </div>
+    <div class="box am" name= "Rubidium (85.47)" am="37">Rb <br> 37 </br> </div>
+    <div class="box aem" name= "Strontium (87.62)" am="38">Sr <br> 38 </br> </div>
+    <div class="box tm" name= "Yttrium (88.90)" am="39">Y <br> 39 </br> </div>
+    <div class="box tm" name= "Zirconium (91.22)" am="40 ">Zr <br> 40 </br> </div>
+    <div class="box tm" name= "Niobium (92.91)" am="41">Nb <br> 41 </br> </div>
+    <div class="box tm" name= "Molybdenur (95.95)" am="42">Mo <br> 42 </br> </div>
+    <div class="box tm" name= "Technetium (98)" am="43">Tc <br> 43 </br> </div>
+    <div class="box tm" name= "Ruthenium (101.07)" am="44">Ru <br> 44 </br> </div>
+    <div class="box tm" name= "Rhodium (102.91)" am="45">Rh <br> 45 </br> </div>
+    <div class="box tm" name= "Palladium (106.42)" am="46">Pd <br> 46 </br> </div>
+    <div class="box tm" name= "Silver (107.87)" am="47">Ag <br> 47 </br> </div>
+    <div class="box tm" name= "Cadmium (112.41)" am="48">Cd <br> 48 </br> </div>
+    <div class="box bm" name= "Indium (114.82)" am="49">In <br> 49 </br> </div>
+    <div class="box bm" name= "Tin (118.71)" am="50">Sn <br> 50 </br> </div>
+    <div class="box sm" name= "Antimony (121.76)" am="51">Sb <br> 51 </br> </div>
+    <div class="box sm" name= "Tellerium (127.60)" am="52">Te <br> 52 </br> </div>
+    <div class="box h" name= "Iodine (126.90)" am="53">I <br> 53 </br> </div>
+    <div class="box ng" name= "Xenon (131.29)" am="54">Xe <br> 54 </br> </div>
   </div>
   <div>
-    <div class="box am" name= "Caesium" am="55">Cs <br> 55 </br> </div>
-    <div class="box aem" name= "Barium" am="56">Ba <br> 56 </br> </div>
-    <div class="box" name= "Lutetium" am="71">Lu <br> 71 </br> </div>
-    <div class="box tm" name= "Hafnium" am="72">Hf <br> 72 </br> </div>
-    <div class="box tm" name= "Tantalum" am="73">Ta <br> 73 </br> </div>
-    <div class="box tm" name= "Tungsten" am="74">W <br> 74 </br> </div>
-    <div class="box tm" name= "Rhenium" am="75">Re <br> 75 </br> </div>
-    <div class="box tm" name= "Osmium" am="76">Os <br> 76 </br> </div>
-    <div class="box tm" name= "Iridium" am="77">Ir <br> 77 </br> </div>
-    <div class="box tm" name= "Platinum" am="78">Pt <br> 78 </br> </div>
-    <div class="box tm" name= "Gold" am="79">Au <br> 79 </br> </div>
-    <div class="box tm" name= "Mercury" am="80">Hg <br> 80 </br> </div>
-    <div class="box bm" name= "Thallium" am="81">Tl <br> 81 </br> </div>
-    <div class="box bm" name= "Lead" am="82">Pb <br> 82 </br> </div>
-    <div class="box bm" name= "Bismuth" am="83">Bi <br> 83 </br> </div>
-    <div class="box sm" name= "Polonium" am="84">Po <br> 84 </br> </div>
-    <div class="box h" name= "Astatine" am="85">At <br> 85 </br> </div>
-    <div class="box ng" name= "Radon" am="86">Rn <br> 86 </br> </div>
+    <div class="box am" name= "Caesium (132.91)" am="55">Cs <br> 55 </br> </div>
+    <div class="box aem" name= "Barium (137.33)" am="56">Ba <br> 56 </br> </div>
+    <div class="box" name= "Lutetium (173.97)" am="71">Lu <br> 71 </br> </div>
+    <div class="box tm" name= "Hafnium (178.49)" am="72">Hf <br> 72 </br> </div>
+    <div class="box tm" name= "Tantalum (180.95)" am="73">Ta <br> 73 </br> </div>
+    <div class="box tm" name= "Tungsten (183.84)" am="74">W <br> 74 </br> </div>
+    <div class="box tm" name= "Rhenium (186.21)" am="75">Re <br> 75 </br> </div>
+    <div class="box tm" name= "Osmium (190.23)" am="76">Os <br> 76 </br> </div>
+    <div class="box tm" name= "Iridium (192.22)" am="77">Ir <br> 77 </br> </div>
+    <div class="box tm" name= "Platinum (195.08)" am="78">Pt <br> 78 </br> </div>
+    <div class="box tm" name= "Gold (196.97)" am="79">Au <br> 79 </br> </div>
+    <div class="box tm" name= "Mercury (200.59)" am="80">Hg <br> 80 </br> </div>
+    <div class="box bm" name= "Thallium (204.38)" am="81">Tl <br> 81 </br> </div>
+    <div class="box bm" name= "Lead (207.2)" am="82">Pb <br> 82 </br> </div>
+    <div class="box bm" name= "Bismuth (208.98)" am="83">Bi <br> 83 </br> </div>
+    <div class="box sm" name= "Polonium (209)" am="84">Po <br> 84 </br> </div>
+    <div class="box h" name= "Astatine (210)" am="85">At <br> 85 </br> </div>
+    <div class="box ng" name= "Radon (222)" am="86">Rn <br> 86 </br> </div>
   </div>
   <div>
-    <div class="box am" name= "Francium" am="87">Fr <br> 87 </br> </div>
-    <div class="box aem" name= "Radium" am="88">Ra <br> 88 </br> </div>
-    <div class="box tm" name= "Lawrencium" am="103">Lr <br> 103 </br> </div>
-    <div class="box tm" name= "Rutherfordium" am="104">Rf <br> 104 </br> </div>
-    <div class="box tm" name= "Dubnium" am="105">Db <br> 105 </br> </div>
-    <div class="box tm" name= "Seaborgium" am="106">Sg <br> 106 </br> </div>
-    <div class="box tm" name= "Bohrium" am="107">Bh <br> 107 </br> </div>
-    <div class="box tm" name= "Hassium" am="108">Hs <br> 108 </br> </div>
-    <div class="box tm" name= "Meitnerium" am="109">Mt <br> 109 </br> </div>
-    <div class="box tm" name= "Darmstadium" am="110">Ds <br> 110 </br> </div>
-    <div class="box tm" name= "Roentgenium" am="111">Rg <br> 111 </br> </div>
-    <div class="box tm" name= "Copernicium" am="112">Cn <br> 112 </br> </div>
-    <div class="box bm" name= "Ununtrium" am="113">Uut <br> 113 </br> </div>
-    <div class="box bm" name= "Flerovium" am="114">Fl <br> 114 </br> </div>
-    <div class="box bm" name= "Ununpentium" am="115">Uup <br> 115 </br> </div>
-    <div class="box bm" name= "Livermonium" am="116">Lv <br> 116 </br> </div>
-    <div class="box h" name= "Ununseptium" am="117">Uus <br> 117 </br> </div>
-    <div class="box ng" name= "Ununoctium" am="118">Uuo <br> 118 </br> </div>
+    <div class="box am" name= "Francium (223)" am="87">Fr <br> 87 </br> </div>
+    <div class="box aem" name= "Radium (226)" am="88">Ra <br> 88 </br> </div>
+    <div class="box tm" name= "Lawrencium (262)" am="103">Lr <br> 103 </br> </div>
+    <div class="box tm" name= "Rutherfordium (267)" am="104">Rf <br> 104 </br> </div>
+    <div class="box tm" name= "Dubnium (268)" am="105">Db <br> 105 </br> </div>
+    <div class="box tm" name= "Seaborgium (271)" am="106">Sg <br> 106 </br> </div>
+    <div class="box tm" name= "Bohrium (272)" am="107">Bh <br> 107 </br> </div>
+    <div class="box tm" name= "Hassium (270)" am="108">Hs <br> 108 </br> </div>
+    <div class="box tm" name= "Meitnerium (276)" am="109">Mt <br> 109 </br> </div>
+    <div class="box tm" name= "Darmstadium (281)" am="110">Ds <br> 110 </br> </div>
+    <div class="box tm" name= "Roentgenium (280)" am="111">Rg <br> 111 </br> </div>
+    <div class="box tm" name= "Copernicium (285)" am="112">Cn <br> 112 </br> </div>
+    <div class="box bm" name= "Ununtrium (284)" am="113">Uut <br> 113 </br> </div>
+    <div class="box bm" name= "Flerovium (289)" am="114">Fl <br> 114 </br> </div>
+    <div class="box bm" name= "Ununpentium (288)" am="115">Uup <br> 115 </br> </div>
+    <div class="box bm" name= "Livermonium (293)" am="116">Lv <br> 116 </br> </div>
+    <div class="box h" name= "Ununseptium (294)" am="117">Uus <br> 117 </br> </div>
+    <div class="box ng" name= "Ununoctium (294)" am="118">Uuo <br> 118 </br> </div>
   </div>
 <br></br>
 <br></br>
 <div>
-    <div class="box am" name= "Lanthanum" am="87">La <br> 57 </br> </div>
-    <div class="box aem" name= "Cerium" am="88">Ce <br> 58 </br> </div>
-    <div class="box tm" name= "Praseodyium" am="103">Pr <br> 59 </br> </div>
-    <div class="box tm" name= "Neodydium" am="104">Nd <br> 60 </br> </div>
-    <div class="box tm" name= "Promethium" am="105">Pm <br> 61 </br> </div>
-    <div class="box tm" name= "Samarium" am="106">Sm <br> 62 </br> </div>
-    <div class="box tm" name= "Europlum" am="107">Eu <br> 63 </br> </div>
-    <div class="box tm" name= "Gadolium" am="108">Gd <br> 64 </br> </div>
-    <div class="box tm" name= "Terbium" am="109">Tb <br> 65 </br> </div>
-    <div class="box tm" name= "Dysprosium" am="110">Dy <br> 66 </br> </div>
-    <div class="box tm" name= "Holmium" am="111">Ho <br> 67 </br> </div>
-    <div class="box tm" name= "Erbium" am="112">Er <br> 68 </br> </div>
-    <div class="box bm" name= "Thulium" am="113">Tm <br> 69 </br> </div>
-    <div class="box bm" name= "Ytterium" am="114">Yb<br> 70 </br> </div>
-    <div class="box bm" name= "Lutium" am="114">Lu <br> 71 </br> </div>
+    <div class="box am" name= "Lanthanum (138.91)" am="87">La <br> 57 </br> </div>
+    <div class="box aem" name= "Cerium (140.12)" am="88">Ce <br> 58 </br> </div>
+    <div class="box tm" name= "Praseodyium (140.91)" am="103">Pr <br> 59 </br> </div>
+    <div class="box tm" name= "Neodydium (144.24)" am="104">Nd <br> 60 </br> </div>
+    <div class="box tm" name= "Promethium (145)" am="105">Pm <br> 61 </br> </div>
+    <div class="box tm" name= "Samarium (150.36)" am="106">Sm <br> 62 </br> </div>
+    <div class="box tm" name= "Europlum (151.96)" am="107">Eu <br> 63 </br> </div>
+    <div class="box tm" name= "Gadolium (157.25)" am="108">Gd <br> 64 </br> </div>
+    <div class="box tm" name= "Terbium (158.93)" am="109">Tb <br> 65 </br> </div>
+    <div class="box tm" name= "Dysprosium (162.50)" am="110">Dy <br> 66 </br> </div>
+    <div class="box tm" name= "Holmium (164.50)" am="111">Ho <br> 67 </br> </div>
+    <div class="box tm" name= "Erbium (167.26)" am="112">Er <br> 68 </br> </div>
+    <div class="box bm" name= "Thulium (168.93)" am="113">Tm <br> 69 </br> </div>
+    <div class="box bm" name= "Ytterium (173.05)" am="114">Yb<br> 70 </br> </div>
+    <div class="box bm" name= "Lutetium (174.97)" am="114">Lu <br> 71 </br> </div>
 </div>
 <div>
-    <div class="box bm" name= "Ununpentium" am="115">Ac <br> 89 </br> </div>
-    <div class="box am" name= "Francium" am="87">Th <br> 90 </br> </div>
-    <div class="box aem" name= "Radium" am="88">Pa <br> 91 </br> </div>
-    <div class="box tm" name= "Lawrencium" am="103">U<br> 92 </br> </div>
-    <div class="box tm" name= "Rutherfordium" am="104">Np<br> 93 </br> </div>
-    <div class="box tm" name= "Dubnium" am="105">Pu <br> 94 </br> </div>
-    <div class="box tm" name= "Seaborgium" am="106">Am <br> 95 </br> </div>
-    <div class="box tm" name= "Bohrium" am="107">Cm <br> 96 </br> </div>
-    <div class="box tm" name= "Hassium" am="108">Bk <br> 97 </br> </div>
-    <div class="box tm" name= "Meitnerium" am="109">Cf <br> 98 </br> </div>
-    <div class="box tm" name= "Darmstadium" am="110">Es <br> 99 </br> </div>
-    <div class="box tm" name= "Roentgenium" am="111">Fm <br> 100 </br> </div>
-    <div class="box tm" name= "Copernicium" am="112">Md <br> 101 </br> </div>
-    <div class="box bm" name= "Ununtrium" am="113">No <br> 102 </br> </div>
-    <div class="box bm" name= "Flerovium" am="114">Lr <br> 103 </br> </div>
+    <div class="box bm" name= "Actinium (227)" am="89">Ac <br> 89 </br> </div>
+    <div class="box am" name= "Thorium (232.04)" am="90">Th <br> 90 </br> </div>
+    <div class="box aem" name= "Protactinium (231.04)" am="91">Pa <br> 91 </br> </div>
+    <div class="box tm" name= "Uranium (238.03)" am="92">U<br> 92 </br> </div>
+    <div class="box tm" name= "Neptunium (237)" am="93">Np<br> 93 </br> </div>
+    <div class="box tm" name= "Plutonium (244)" am="94">Pu <br> 94 </br> </div>
+    <div class="box tm" name= "Americium (243)" am="95">Am <br> 95 </br> </div>
+    <div class="box tm" name= "Curium (247)" am="96">Cm <br> 96 </br> </div>
+    <div class="box tm" name= "Berkelium (247)" am="97">Bk <br> 97 </br> </div>
+    <div class="box tm" name= "Californium (251)" am="98">Cf <br> 98 </br> </div>
+    <div class="box tm" name= "Einsteinium (252)" am="99">Es <br> 99 </br> </div>
+    <div class="box tm" name= "Fermium (257)" am="100">Fm <br> 100 </br> </div>
+    <div class="box tm" name= "Mendelevium (258)" am="101">Md <br> 101 </br> </div>
+    <div class="box bm" name= "Nobelium (259)" am="102">No <br> 102 </br> </div>
+    <div class="box bm" name= "Lawrencium (262)" am="103">Lr <br> 103 </br> </div>
 
 </div>
 
@@ -222,7 +226,11 @@
 
 </html>
 body{
-  background: #eee; 
+  background-color: #fff; 
+  background-image: 
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
   margin:0;
   font-family:'Open Sans', arial;
 }
@@ -251,6 +259,17 @@ nav ul{
   margin: 0; 
   padding:0;
 }
+#play-game{
+  background-color: grey;
+  text-decoration:none;
+  color: black;
+  padding: 20px;
+  display:inline-block;
+  margin-bottom:20px;
+  border-radius: 20px;
+  border: 3px solid darkgray;
+  font-weight:600;
+}
 nav ul li{
   display:block;
   margin: 10px 0;
@@ -272,6 +291,7 @@ nav ul li a i{
 nav ul li a:hover{
   background:#333;
 }
+
 #main{
   margin-left:200px;
 }
@@ -346,6 +366,12 @@ nav ul li a:hover{
 .bm {
   background: green
 }
+
+.box:hover {
+ -webkit-transform: rotate(-7deg);
+ -moz-transform: rotate(-7deg);
+ -o-transform: rotate(-7deg);
+}
 $(document).ready(function(){
   $(".box").click(function(){
       $( "#shadowbox" ).show();
@@ -359,5 +385,11 @@ $(document).ready(function(){
        $( "#shadowbox" ).hide();
        $( "#overlay" ).hide();
   });
+  function showHex(){
+            var hex =  document.querySelector("#color_hex_value"),
+                h1 = document.querySelector("h1");
+        
+            h1.style.color = document.querySelector("#color_picker").value;
+		}
                
 });
