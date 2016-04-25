@@ -32,6 +32,17 @@ nav ul{
   margin: 0; 
   padding:0;
 }
+#play-game{
+  background-color: grey;
+  text-decoration:none;
+  color: black;
+  padding: 20px;
+  display:inline-block;
+  margin-bottom:20px;
+  border-radius: 20px;
+  border: 3px solid darkgray;
+  font-weight:600;
+}
 nav ul li{
   display:block;
   margin: 10px 0;
@@ -53,22 +64,22 @@ nav ul li a i{
 nav ul li a:hover{
   background:#333;
 }
+
 #main{
   margin-left:200px;
 }
 #chem:hover, #chem.active{
   background:green;
 }
-#math:hover, #math.active{
+#math:hover{
   background:blue;
 }
-#cs:hover, #cs.active{
+#cs:hover{
   background:red;
 }
-#ee:hover, #ee.active{
+#ee:hover{
   background:purple;
 }
-
 .box {
   border: 1px solid black;
   height: 50px;
@@ -127,4 +138,10 @@ nav ul li a:hover{
 }
 .bm {
   background: green
+}
+
+.box:hover {
+ -webkit-transform: rotate(-7deg);
+ -moz-transform: rotate(-7deg);
+ -o-transform: rotate(-7deg);
 }
